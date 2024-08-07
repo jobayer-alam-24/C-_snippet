@@ -1,0 +1,216 @@
+{
+	"Namespace Container": {
+		"scope": "csharp",
+		"prefix": "namespace",
+		"body": [
+			"namespace sample",
+			"{",
+			"\tclass Program",
+			"\t{",
+			"\t\tstatic void Main(string[] args)",
+			"\t\t{",
+			"\t\t\t$1",
+			"\t\t}",
+			"\t}",
+			"}"
+		],
+		"description": "Namespace Container"
+	},
+	"class Container": {
+		"scope": "csharp",
+		"prefix": "cls",
+		"body": [
+			"class className",
+			"{",
+			"\t\t$1",
+			"}"
+		],
+		"description": "Class Container"
+	},
+	"writeLine": {
+		"scope": "csharp",
+		"prefix": "rtl",
+		"body": [
+			"Console.WriteLine($\"$1\");"
+		],
+		"description": "writeLine"
+	},
+	"rt": {
+		"scope": "csharp",
+		"prefix": "rt",
+		"body": [
+			"Console.Write($\"$1\");"
+		],
+		"description": "Write"
+	},
+	"rdl": {
+		"scope": "csharp",
+		"prefix": "rdl",
+		"body": [
+			"Console.ReadLine();"
+		],
+		"description": "readLine"
+	},
+	"intin": {
+		"scope": "csharp",
+		"prefix": "intin",
+		"body": [
+			"int.Parse(Console.ReadLine());"
+		],
+		"description": "IntInput"
+	},
+	"void": {
+		"scope": "csharp",
+		"prefix": "void",
+		"body": [
+			"static void MyFunc($1){",
+			"\t$2",
+			"}"
+		],
+		"description": "void"
+	},
+	"intfunc": {
+		"scope": "csharp",
+		"prefix": "intfunc",
+		"body": [
+			"static int MyFunc(int n$1){",
+			"\treturn n;$2",
+			"}"
+		],
+		"description": "IntInput"
+	},
+	"switch - swn": {
+		"scope": "csharp",
+		"prefix": "swn",
+		"body": [
+			"switch (checkingVar$1){",
+			"\tcase 1$2:",
+			"$3",
+			"\t\tbreak;",
+			"\tdefault:",
+			"\t\tConsole.WriteLine(\"Invalid\");",
+			"\t\tbreak;",
+			"}"
+		],
+		"description": "switch normal"
+	},
+	"switch with Type - swt": {
+		"scope": "csharp",
+		"prefix": "swt",
+		"body": [
+			"string messege = value switch",
+			"{",
+			"\t\t1 => \"\",",
+			"\t\t_=> \"Default\"",
+			"};",
+			"Console.WriteLine(messege);"
+		],
+		"description": "switch normal"
+	},
+	"intarray": {
+		"scope": "csharp",
+		"prefix": "intarray",
+		"body": [
+			"int[] intArray$1 = new int[10$2];"
+		],
+		"description": "array Declare"
+	},
+	"prntarray": {
+		"scope": "csharp",
+		"prefix": "prntarray",
+		"body": [
+			"int arrayLength$1 = intArray.Length;",
+			"for(int i = 0; i < arrayLength; i++){",
+			"\t\tConsole.WriteLine($\"{${i}}\");",
+			"}"
+		],
+		"description": "array print"
+	},
+	"for": {
+		"scope": "csharp",
+		"prefix": "for",
+		"body": [
+			"for(int i = 0; i < 11; i++){",
+			"\tConsole.WriteLine($\"{${i}}\");",
+			"}"
+		],
+		"description": "for loop"
+	},
+	"while": {
+		"scope": "csharp",
+		"prefix": "while",
+		"body": [
+			"int x = 0;",
+			"while(x < 10){",
+			"\tConsole.WriteLine($\"{${x}}\");",
+			"\tx++;",
+			"}"
+		],
+		"description": "while"
+	},
+	"dowhile": {
+		"scope": "csharp",
+		"prefix": "dowhile",
+		"body": [
+			"int x = 0;",
+			"do{",
+			"\tConsole.WriteLine($\"{${x}}\");",
+			"\tx++;",
+			"}while(x < 10);"
+		],
+		"description": "do while"
+	},
+	"ifelse": {
+		"scope": "csharp",
+		"prefix": "ifelse",
+		"body": [
+			"int x = 1;",
+			"if(x > 1$1){",
+			"\t$2",
+			"}",
+			"else if(x == 1$3){",
+			"\t$4",
+			"}",
+			"else{",
+			"\t$5",
+			"}"
+		],
+		"description": "if else"
+	},
+	"try-catch": {
+		"scope": "csharp",
+		"prefix": "try",
+		"body": [
+			"try{}",
+			"catch(Exception e){",
+			"\t$1",
+			"}",
+			"finally{$2}"
+		],
+		"description": "if else"
+	},
+	"full-date": {
+		"scope": "csharp",
+		"prefix": "fulldate",
+		"body": [
+			"string fullDate = DateTime.Now.ToString(\"dddd, dd-MMMM-yyyy\");"
+		],
+		"description": "full Date" 
+	},
+	"date": {
+		"scope": "csharp",
+		"prefix": "date",
+		"body": [
+			"string date = DateTime.Now.ToString(\"dd/MM/yyyy\");"
+		],
+		"description": "Date"
+	},
+	"time": {
+		"scope": "csharp",
+		"prefix": "time",
+		"body": [
+			"string time = DateTime.Now.ToString(\"HH:mm:ss\");"
+		],
+		"description": "Time"
+	}
+}
