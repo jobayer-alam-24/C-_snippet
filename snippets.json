@@ -212,5 +212,16 @@
 			"string time = DateTime.Now.ToString(\"HH:mm:ss\");"
 		],
 		"description": "Time"
+	},
+	"foreach": {
+		"scope": "csharp",
+		"prefix": "foreach",
+		"body": [
+			"foreach(int i in $1myArray$1){",
+			"\tConsole.Write($\"{${i}}\");",
+			"}"
+		],
+		"description": "For each loop"
 	}
+
 }
